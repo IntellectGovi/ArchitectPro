@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-surface: #0b1326;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container: #171f33;
+  --color-surface-container-high: #222a3d;
+  --color-surface-container-highest: #2d3449;
+  --color-surface-container-lowest: #060e20;
+  --color-surface-bright: #31394d;
+  
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #c6c5d5;
+  
+  --color-primary: #bdc2ff;
+  --color-primary-container: #818cf8;
+  --color-on-primary: #131e8c;
+  --color-on-primary-container: #101b8a;
+  
+  --color-secondary: #c0c3f3;
+  --color-secondary-container: #40446c;
+  
+  --color-tertiary: #f7bd3e;
+  --color-tertiary-container: #c08d00;
+  
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  
+  --color-outline: #908f9e;
+  --color-outline-variant: #454653;
+}
+
+.light {
+  --color-surface: #f8fafc;
+  --color-surface-container-low: #f1f5f9;
+  --color-surface-container: #e2e8f0;
+  --color-surface-container-high: #cbd5e1;
+  --color-surface-container-highest: #94a3b8;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-bright: #f8fafc;
+  
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #475569;
+  
+  --color-primary: #4f46e5;
+  --color-primary-container: #818cf8;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #ffffff;
+  
+  --color-secondary: #6366f1;
+  --color-secondary-container: #e0e7ff;
+  
+  --color-tertiary: #d97706;
+  --color-tertiary-container: #fbbf24;
+  
+  --color-error: #dc2626;
+  --color-error-container: #fee2e2;
+  
+  --color-outline: #94a3b8;
+  --color-outline-variant: #e2e8f0;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased selection:bg-primary/30 selection:text-primary;
+  }
+}
+
+.glass-panel {
+  @apply bg-surface-container-highest/70 backdrop-blur-xl;
+}
+
+.indigo-glow {
+  box-shadow: 0px 24px 48px rgba(15, 23, 42, 0.5), 0px 0px 12px rgba(129, 140, 248, 0.04);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-surface;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-surface-container-highest rounded-full;
+}
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-surface: #0b1326;
+  --color-surface-dim: #0b1326;
+  --color-surface-bright: #31394d;
+  --color-surface-container-lowest: #060e20;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container: #171f33;
+  --color-surface-container-high: #222a3d;
+  --color-surface-container-highest: #2d3449;
+  
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #c6c5d5;
+  
+  --color-primary: #bdc2ff;
+  --color-primary-container: #818cf8;
+  --color-on-primary: #131e8c;
+  --color-on-primary-container: #101b8a;
+  
+  --color-secondary: #c0c3f3;
+  --color-secondary-container: #40446c;
+  --color-on-secondary: #292d54;
+  --color-on-secondary-container: #aeb2e0;
+  
+  --color-tertiary: #f7bd3e;
+  --color-tertiary-container: #c08d00;
+  --color-on-tertiary: #402d00;
+  
+  --color-outline: #908f9e;
+  --color-outline-variant: #454653;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-surface-container-highest/70 backdrop-blur-xl border border-outline-variant/10;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-primary-container to-primary;
+  }
+  
+  .bg-primary-gradient {
+    @apply bg-gradient-to-br from-primary-container to-primary;
+  }
+}
